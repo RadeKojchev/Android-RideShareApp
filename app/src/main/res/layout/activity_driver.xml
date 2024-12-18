@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/driverWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Driver!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:padding="10dp" />
+
+    <!-- Section Title -->
+    <TextView
+        android:id="@+id/sectionTitlePendingRequests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pending Requests:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:padding="10dp" />
+
+    <!-- Placeholder for No Requests -->
+    <TextView
+        android:id="@+id/noPendingRequestsText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No pending requests at the moment."
+        android:textColor="@android:color/darker_gray"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPendingRequests"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+    <!-- activity_driver.xml -->
+    <Button
+        android:id="@+id/btnViewComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="View Comments"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+    <!-- Button to View Accepted Requests -->
+    <Button
+        android:id="@+id/btnGoToAcceptedRequests"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="View Accepted Requests"
+        android:backgroundTint="@color/black"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+</LinearLayout>
